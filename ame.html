@@ -41,7 +41,7 @@
                         <div id="cont-way">
                             <div class="cont-way-one"><a class="nowebo"href="">
                                     <img class="img-weibo" src="./src/img/weibo.png" alt="">
-                                    <h1 href="">新浪微博</h1>
+                                    <h1 class="weibo" href="">新浪微博</h1>
                                 </a></div>
                             <div class="cont-way-two"><a href="mailto:18246003539@163.com">
                                     <img class="img-email" src="./src/img/email.png" alt="">
@@ -59,10 +59,10 @@
                                 </a>
 
                                 <div class="luno-slider">
-                                    <div style="background:red;"><img src="" alt=""></div>
-                                    <div style="background:black;"><img src="" alt=""></div>
-                                    <div style="background:orange;"><img src="" alt=""></div>
-                                    <div style="background:pink;"><img src="" alt=""></div>
+                                    <div style="background:red;"><img src="./src/img/pic_4.jpg" alt=""></div>
+                                    <div style="background:black;"><img src="./src/img/pic_1.png" alt=""></div>
+                                    <div style="background:orange;"><img src="./src/img/pic_3.jpg" alt=""></div>
+                                    <div style="background:pink;"><img src="./src/img/pic_2.png" alt=""></div>
                                 </div>
 
                             </div>
@@ -83,6 +83,11 @@
        var olist = $('.nav-list');
        var $left = $('.arrow-left');
        var $right = $('.arrow-right');
+       var $h = $('.cont-way-one');
+       console.log($h)
+       $h.on('click', function(){
+           alert("微博有害身心，已经卸载...");
+       })
        console.log($left);
         function mouseover(){
             olist.css({'display':'block'});
