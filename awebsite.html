@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>我的网站～</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/img/favicon.ico" />
+    <link rel="stylesheet" href="./src/css/awebsite.css">
+</head>
+<body>
+    <div class="aweb-wrap">
+        <div>
+        <img src="./src/img/smallogo.png" alt="" class="nav-logo">
+
+         <div class="aweb-main">
+                 <div class="nav-hum">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                        <li id="first-li"><a href="face.html">首页</a></li>
+                        <li><a href="ame.html">关于我</a></li>
+                        <li><a href="agame.html">关于快乐</a></li>
+                        <li><a href="afuture.html">关于未来</a></li>
+                </ul>
+        </div>
+
+        <section class="sec-main">
+            <h1>欢迎来到我的个人网站!</h1>
+            <h3>Welcome to my personal website!</h3>
+            <h1>你可以四处逛逛.</h1>
+            <h3>Do not be too fast to leave.</h3>
+        </section>
+        <div class="svg-main">
+            <svg width="1200" height="200" xmlns="http://www.w3.org/2000/svg">
+                <text  font-size="150" y="160" x="1200">H e l l o
+                    <animate attributeName="x" from="1200" to="0" begin="1s" dur="5s" repeatCount="indefinite" />
+                    <animate attributeName="opacity" from="1" to="0" begin="1s" dur="5s" repeatCount="indefinite" />
+                </text>
+            </svg>
+        </div>
+        </div>
+    </div>
+     <script src="./src/js/jquery.js"></script>
+   <script>
+       var olist = $('.nav-list');
+        function mouseover(){
+            console.log('1');
+            olist.css({'display':'block'});
+        }
+
+        function mouseout(){
+            console.log('2');
+            olist.css({'display':'none'});
+        }
+
+        $('.aweb-main').on('mouseover', function(){
+            console.log('3');
+            mouseover();
+        })
+
+        $('.aweb-main').on('mouseout', function(){
+            console.log('4');
+            mouseout();
+        })
+   </script>
+</body>
+</html>

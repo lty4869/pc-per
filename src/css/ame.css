@@ -1,0 +1,353 @@
+*{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    border: 0;
+    font-size: 100%;
+    /*vertical-align: baseline;*/
+    outline: none;
+    text-decoration: none;
+    color:#000;
+}
+html,body{
+    margin:0px;
+    height:100%;
+}
+
+.fu-wrap{
+    background-attachment: fixed;
+    width: 100%;
+    height:100%;
+    position: relative;
+    box-shadow: inset 0px 5px 20px rgba(0,0,0,0.2);
+    background-position: 0px 5.6px;
+    padding-top:7%;
+}
+
+.fu-main{
+    /*background-image:url('background.jpg');
+    background-size:cover; */
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+/*smallogo*/
+
+.nav-logo{
+    float:left;
+    width:50px;
+    height:40px;
+    margin-top:30px;
+    margin-left: 40px;
+    animation: logo-in 0.5s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+    opacity: 0;
+}
+
+@keyframes logo-in{
+    0%{
+        /*top:300px;*/
+        opacity:0;
+    }
+    100%{
+        /*top:330px;*/
+        opacity:1;
+    }
+}
+
+/*下拉菜单*/
+.nav-main{
+    position:relative;
+    float:right;
+    /*top:2%;
+    left:71.8%;*/
+    /*width:300px;
+    height:500px;*/
+    overflow:hidden;
+    /*cursor:pointer;*/
+    z-index:100;
+}
+
+.nav-hum{
+    position:relative;
+    float:right;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    margin-top:40px;
+    margin-right: 40px;
+    z-index:101;
+    /*border:1px solid black;*/
+}
+
+.nav-hum span{
+    position:absolute;
+    background-color: #000;
+    width:100%;
+    height:5px;
+}
+
+.nav-hum span:nth-child(1){
+    top:0;
+}
+
+.nav-hum span:nth-child(2){
+    top:8px;
+}
+
+.nav-hum span:nth-child(3){
+    top:8px;
+}
+
+.nav-hum span:nth-child(4){
+    top:16px;
+}
+
+
+.nav-hum:hover span:nth-child(1){
+    display: none;
+}
+
+.nav-hum:hover span:nth-child(2){
+transform:rotateZ(45deg);
+}
+
+.nav-hum:hover span:nth-child(3){
+    transform:rotateZ(-45deg);
+}
+
+.nav-hum:hover span:nth-child(4){
+    display:none;
+}
+/*下拉菜单*/
+.nav-main .nav-list{
+    top:4%;
+    width:280px;
+    height:500px;
+    background-color:white;
+    opacity:0.5;
+    margin-top:20px;
+    margin-right:20px;
+    border-radius:2em;
+    display:none;
+    border:1px solid gray;
+}
+.nav-main .nav-list li{
+    width:100%;
+    height:125px;
+    border-bottom:1px solid gray;
+    text-align: center;
+}
+.nav-main .nav-list #first-li{
+    padding-left:40px;
+}
+
+.nav-main .nav-list li a{
+    font-size: 30px;
+    line-height:125px;
+    color:#000;
+}
+
+/*introduce*/
+
+.fu-wrap #main{
+    position:absolute;
+    width:100%;
+    height:70%;
+    /*padding-top:60px;*/
+    /*border:1px solid red;*/
+}
+#main .overview .sec-main{
+    z-index: 1;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.075);
+    animation: sec-in 0.5s ease-out 1s 1 forwards;
+    opacity:0;
+}
+
+@keyframes sec-in{
+    0%{
+        top:-300px;
+        opacity:0;
+    }
+    100%{
+        top:0;
+        opacity:1;
+    }
+}
+
+#main .overview .sec-main #intro{
+    position: relative;
+    text-align: center;
+}
+
+#main .overview .sec-main #intro img{
+    position: absolute;
+    left:25%;
+    top:-13%;
+}
+
+/*联系方式*/
+
+#main .overview .sec-main #cont-way{
+    position:relative;
+    width:100%;
+    margin-top:20px;
+}
+
+
+#main .overview .sec-main #cont-way div{
+    display:inline-block;
+}
+
+#main .overview .sec-main .cont-way-one{
+    margin-left:40%;
+}
+
+#main .overview .sec-main .cont-way-two{
+    margin-left:9%;
+}
+#main .overview .sec-main #cont-way img{
+    width: 74px;
+    height: 74px;
+    margin-top: 2px;
+}
+
+#main .overview .sec-main #cont-way h1{
+    text-align: center;
+    width: 74px;
+    font-weight: 400;
+    color:rgb(187, 147, 1);
+}
+
+
+/*联系方式的hover元素未添加*/
+
+
+
+#main .overview .sec-main #cont-way a h1:hover{
+    color:rgb(36, 125, 222);
+    box-shadow: 3px 2px 5px 5px rgb(232,232,232);
+}
+
+/*轮播图*/
+/*box-shadow: 25px 61px 62px 0 rgba(0,0,0,.1);*/
+
+.luno-main{
+    position:relative;
+    width:100vw;
+    /*border:1px solid red;*/
+}
+
+.luno-main .luno-prev{
+    overflow:hidden;
+    /*position:absolute;*/
+}
+
+ #arrow-left{
+    position:relative;
+    float:left;
+    cursor: w-resize;
+    left:25%;
+    margin-top:200px;
+    z-index:101;
+}
+
+#arrow-right{
+    position:absolute;
+    /*position:relative;*/
+    float:left;
+    cursor: e-resize;
+    left:73%;
+    margin-top:200px;
+    z-index:101;
+}
+
+
+.luno-main .luno-prev .luno-slider{
+    position:relative;
+    left:0px;
+    width:3200px;
+    height:350px;
+    margin-top:50px;
+
+}
+
+.luno-main .luno-slider div{
+    position: absolute;
+    float:left;
+    width:450px;
+    height:100%;
+    box-sizing:border-box;
+    box-shadow: 25px 61px 62px 0 rgba(0,0,0,.1);
+    /*left:30%;*/
+    /*padding-left:40px;*/
+}
+/**/
+/*页脚*/
+#footer h2{
+    font-size:25px;
+    text-align: center;
+}
+/*下一页*/
+.button{
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 195px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0.75;
+    z-index: 999;
+    background-position: 0 100%;
+    background-image: url('../img/arrow.png');
+    transition: all .2s ease-in-out 0s;
+    animation: btn-in 3s ease-out 1s 1 forwards;
+}
+
+.button:hover{
+    cursor:pointer;
+    opacity:1;
+}
+/*第二页*/
+.me-tv{
+    width:100%;
+    height:100%;
+    background:url(../img/zhipai.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.me-tv span:nth-child(1){
+    position: absolute;
+    display:block;
+    width:10px;
+    margin-left:200px;
+    padding-top:100px;
+    text-align: center;
+    font-size:33px;
+}
+
+.me-tv span:nth-child(2){
+    padding-left:300px;
+    padding-top:140px;
+    position: absolute;
+    display:block;
+    width:10px;
+    text-align: center;
+    display:none;
+}
+.me-tv span:nth-child(1):hover{
+    cursor:pointer;
+    color:gold;
+}
+
+.me-tv span:nth-child(1):hover+span:nth-child(2){
+    display:block;
+}
+

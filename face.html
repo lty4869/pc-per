@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成长中</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/img/favicon.ico" />
+    <link rel="stylesheet" href="./src/css/face.css">
+</head>
+<body>
+    <div class="first-wrap">
+        
+        <div class="first-main">
+            <img src="./src/img/smallogo.png" alt="" class="nav-logo">
+
+            <div class="nav-main">
+                 <div class="nav-hum">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                        <li id="first-li"><a href="awebsite.html">关于网站</a></li>
+                        <li><a href="ame.html">关于我</a></li>
+                        <li><a href="aread.html">关于阅读</a></li>
+                        <li><a href="afuture.html">关于未来</a></li>
+                </ul>
+            </div>
+
+            <div class="center-name">Li ty</div>
+        </div>
+    </div>
+
+    <script src="./src/js/jquery.js"></script>
+   <script>
+       var olist = $('.nav-list');
+        function mouseover(){
+            console.log('1');
+            olist.css({'display':'block'});
+        }
+
+        function mouseout(){
+            console.log('2');
+            olist.css({'display':'none'});
+        }
+
+        $('.nav-main').on('mouseover', function(){
+            console.log('3');
+            mouseover();
+        })
+
+        $('.nav-main').on('mouseout', function(){
+            console.log('4');
+            mouseout();
+        })
+   </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+*{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+    text-decoration: none;
+}
+html,body{
+    margin:0px;
+    height:100%;
+}
+
+.aweb-wrap{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    height:100%;
+    background:rgb(23,25,29);
+}
+
+.nav-logo{
+    float:left;
+    width:50px;
+    height:40px;
+    margin-top:40px;
+    margin-left: 40px;
+    animation: logo-in 0.5s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+    opacity: 0;
+}
+
+@keyframes logo-in{
+    0%{
+        /*top:300px;*/
+        opacity:0;
+    }
+    100%{
+        /*top:330px;*/
+        opacity:1;
+    }
+}
+/*下拉菜单*/
+.aweb-main{
+    position:relative;
+    float:right;
+    /*top:2%;
+    left:71.8%;*/
+    /*width:300px;
+    height:500px;*/
+    overflow:hidden;
+    /*cursor:pointer;*/
+    z-index:100;
+}
+
+.nav-hum{
+    position:relative;
+    float:right;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    margin-top:40px;
+    margin-right:40px;
+    z-index:101;
+    /*border:1px solid black;*/
+}
+
+.nav-hum span{
+    position:absolute;
+    background-color: #fff;
+    width:100%;
+    height:5px;
+}
+
+.nav-hum span:nth-child(1){
+    top:0;
+}
+
+.nav-hum span:nth-child(2){
+    top:8px;
+}
+
+.nav-hum span:nth-child(3){
+    top:8px;
+}
+
+.nav-hum span:nth-child(4){
+    top:16px;
+}
+
+
+.nav-hum:hover span:nth-child(1){
+    display: none;
+}
+
+.nav-hum:hover span:nth-child(2){
+transform:rotateZ(45deg);
+}
+
+.nav-hum:hover span:nth-child(3){
+    transform:rotateZ(-45deg);
+}
+
+.nav-hum:hover span:nth-child(4){
+    display:none;
+}
+
+.aweb-main .nav-list{
+    top:4%;
+    width:280px;
+    height:500px;
+    background-color:#fff;
+    opacity:0.7;
+    margin-top:15px;
+    margin-right:15px;
+    display:none;
+    border-radius:2em;
+}
+.aweb-main .nav-list li{
+    width:100%;
+    height:125px;
+    border-bottom:1px solid gray;
+    text-align: center;
+}
+.aweb-main .nav-list #first-li{
+    padding-left:40px;
+}
+
+.aweb-main .nav-list li a{
+    font-size: 30px;
+    line-height:125px;
+    color:#000;
+}
+
+/*屏幕中央字幕*/
+.sec-main{
+    position:absolute;
+    top:50%;
+    left:33%;
+    /*border:1px solid red;*/
+    animation: sec-in 0.5s ease-out 1s 1 forwards;
+    opacity:0;
+}
+
+@keyframes sec-in{
+    0%{
+        opacity:0;
+        top:45%;
+    }
+    100%{
+        opacity:1;
+        top:50%;
+    }
+}
+
+.sec-main h1{
+    padding-bottom:5px;
+    font-size:40px;
+    text-align: center;
+    color:rgb(247, 247, 231);
+}
+
+.sec-main h3{
+    padding-bottom:5px;
+    font-size:30px;
+    text-align: center;
+    color:rgb(247, 247, 231);
+}
+
+.svg-main{
+    position:absolute;
+    top:15%;
+    left:9%;
+    width:1200px;
+    height:200px;
+    font-family:hello;
+    font-size:120px;
+    color:#fff;
+}
+@font-face{
+    font-family: hello;
+    src:url('../ttf/Ginga.ttf');
+}

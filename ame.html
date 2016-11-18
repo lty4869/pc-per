@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>关于我～</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/img/favicon.ico" />
+    <link rel="stylesheet" href="./src/css/ame.css">
+</head>
+<body style="background:#fff;">
+    <!--浮动菜单栏-->
+        <div style="width:100%; height:10%; border-bottom:1px solid #ededed;background:;position:fixed;z-index:1000;">
+            <img src="./src/img/smallogo.png" alt="" class="nav-logo">
+            <div class="nav-main">
+                <div class="nav-hum">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-list">
+                        <li id="first-li"><a href="face.html">首页</a></li>
+                        <li><a href="awebsite.html">关于网站</a></li>
+                        <li><a href="aread.html">关于阅读</a></li>
+                        <li><a href="./afuture.html">关于未来</a></li>
+                </ul>
+            </div>
+        </div>    
+    <div class="fu-wrap">
+        <div class="fu-main">
+            <main id="main">
+                <div class="overview">
+                    <section class="sec-main">
+                        <div id="intro">
+                            <img src="./src/img/icon.png" alt="">
+                            <h1 style="padding-bottom:10px;font-size:30px;">我的名字叫：LI ty</h1>
+                            <h2 style="padding-bottom:10px;font-size:20px;">目前本科三年级～</h2>
+                            <h2 style="padding-bottom:10px;font-size:20px;">可以通过以下的方式联系我 :-D</h2>
+                        </div>
+
+                        <div id="cont-way">
+                            <div class="cont-way-one"><a class="nowebo"href="">
+                                    <img class="img-weibo" src="./src/img/weibo.png" alt="">
+                                    <h1 href="">新浪微博</h1>
+                                </a></div>
+                            <div class="cont-way-two"><a href="mailto:18246003539@163.com">
+                                    <img class="img-email" src="./src/img/email.png" alt="">
+                                    <h1>电子邮件</h1>
+                                </a></div>
+                        </div>
+
+                        <div class="luno-main">
+                            <div class="luno-prev">
+
+                                <a id="arrow-left" class="arrow-left"href="#">
+                                    <svg width="14" height="25" viewBox="0 0 14 25" xmlns="http://www.w3.org/2000/svg"><title>&lt;</title><g fill="#979797" fill-rule="evenodd"><path d="M12.02 0l1.415 1.415-12.02 12.02L0 12.023z"></path><path d="M13.434 23.02l-1.414 1.415L0 12.415 1.413 11z"></path></g></svg>
+                                </a>
+                                <a id="arrow-right" class="arrow-right"href="#"><svg width="14" height="25" viewBox="0 0 14 25" xmlns="http://www.w3.org/2000/svg"><title>&lt;</title><g fill="#979797" fill-rule="evenodd"><path d="M1.98 25L.564 23.584l12.02-12.02L14 12.977z"></path><path d="M.566 1.98L1.98.564 14 12.585 12.587 14z"></path></g></svg>
+                                </a>
+
+                                <div class="luno-slider">
+                                    <div style="background:red;"><img src="" alt=""></div>
+                                    <div style="background:black;"><img src="" alt=""></div>
+                                    <div style="background:orange;"><img src="" alt=""></div>
+                                    <div style="background:pink;"><img src="" alt=""></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+                    <footer id="footer"><h2>我平时很喜欢照相～</h2></footer>
+                </div>
+            </main>
+            <a class="button" data-slide="3" href="#slider"></a>
+        </div>
+    </div>
+    <div class="me-tv" id="slider">
+        <span><h2>最喜欢的美剧是纸牌屋～</h2></span>
+        <span><h3>最喜欢的演员是凯文史派西！</h3></span>
+    </div>
+<script src="./src/js/jquery.js"></script>
+<script>
+       var olist = $('.nav-list');
+       var $left = $('.arrow-left');
+       var $right = $('.arrow-right');
+       console.log($left);
+        function mouseover(){
+            olist.css({'display':'block'});
+        }
+
+        function mouseout(){
+            olist.css({'display':'none'});
+        }
+
+        $('.nav-main').on('mouseover', function(){
+            mouseover();
+        })
+
+        $('.nav-main').on('mouseout', function(){
+            mouseout();
+        })
+        //轮播图
+        var index = 0;
+        var timer = null;
+        var flag = true;
+        var odiv = $('.luno-slider div');
+
+        function init(){
+            odiv.css({'left':'15%'});
+            odiv.eq(0).css({'left':'-8%'});
+            odiv.eq(1).css({'left':'15%'});
+            odiv.eq(2).css({'left':'39%'});
+            odiv.eq(3).css({'left':'63%'});
+        }
+
+        function leftMove(){
+            console.log('left')
+            if(flag){
+                flag = false;
+                odiv.css({'z-index':'1'});
+                odiv.eq((index)%4).animate({'left':'-16%','opacity':'0'});
+                odiv.eq((index+1)%4).animate({'left':'-8%'});
+                odiv.eq((index+2)%4).animate({'left':'15%','z-index':'100'});
+                odiv.eq((index+3)%4).animate({'left':'39%','opacity':'1'},function(){
+                    index++;
+                    flag = true;
+                });
+            }
+        };
+
+        function rightMove(){
+            console.log('right');
+            if(flag){
+                flag = false;
+                odiv.css({'z-index':'1'});
+                odiv.eq((index-1)%4).css({'left':'-16%','opacity':'0'});
+                odiv.eq((index-1)%4).animate({'left':'-8%','opacity':'1'});
+                odiv.eq((index)%4).animate({'left':'15%','z-index':'100'});
+                odiv.eq((index+1)%4).animate({'left':'39%','z-index':'100'});
+                odiv.eq((index+2)%4).animate({'left':'63%','opacity':'0'}, function(){
+                    index--;
+                    flag = true;
+                });
+            }
+        };
+
+        $left.on('click',function(){
+            leftMove();
+        } );
+
+
+        $right.on('click',function(){
+            rightMove();
+        });
+        init();
+       var timer = setInterval(rightMove,3000);
+</script>
+</body>
+</html>

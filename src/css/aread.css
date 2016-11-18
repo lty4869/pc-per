@@ -1,0 +1,197 @@
+*{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    border: 0;
+    font-size: 100%;
+    /*vertical-align: baseline;*/
+    outline: none;
+    text-decoration: none;
+    color:#000;
+}
+html,body{
+    margin:0px;
+    height:100%;
+}
+
+.fu-wrap{
+    background-attachment: fixed;
+    width: 100%;
+    height:100%;
+    position: relative;
+    box-shadow: inset 0px 5px 20px rgba(0,0,0,0.2);
+    background-position: 0px 5.6px;
+    padding-top:7%;
+}
+
+.fu-main{
+    background-image:url('../img/farmac.jpg');
+    background-size:100% 100%; 
+    background-position:-2px -2px;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+/*手机用户*/
+/*.fu-main2{
+    background-image:url('../img/ipad.jpg');
+    background-size:100% 100%; 
+    background-position:-2px -2px;
+    position:absolute;
+    width:100%;
+    height:100%;
+}*/
+
+/*smallogo*/
+
+.nav-logo{
+    float:left;
+    width:50px;
+    height:40px;
+    margin-top:30px;
+    margin-left: 40px;
+    animation: logo-in 0.5s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+    opacity: 0;
+}
+
+@keyframes logo-in{
+    0%{
+        /*top:300px;*/
+        opacity:0;
+    }
+    100%{
+        /*top:330px;*/
+        opacity:1;
+    }
+}
+
+/*下拉菜单*/
+.nav-main{
+    position:relative;
+    float:right;
+    /*top:2%;
+    left:71.8%;*/
+    /*width:300px;
+    height:500px;*/
+    overflow:hidden;
+    /*cursor:pointer;*/
+    z-index:100;
+}
+
+.nav-hum{
+    position:relative;
+    float:right;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    margin-top:40px;
+    margin-right: 40px;
+    z-index:101;
+    /*border:1px solid black;*/
+}
+
+.nav-hum span{
+    position:absolute;
+    background-color: #000;
+    width:100%;
+    height:5px;
+}
+
+.nav-hum span:nth-child(1){
+    top:0;
+}
+
+.nav-hum span:nth-child(2){
+    top:8px;
+}
+
+.nav-hum span:nth-child(3){
+    top:8px;
+}
+
+.nav-hum span:nth-child(4){
+    top:16px;
+}
+
+
+.nav-hum:hover span:nth-child(1){
+    display: none;
+}
+
+.nav-hum:hover span:nth-child(2){
+transform:rotateZ(45deg);
+}
+
+.nav-hum:hover span:nth-child(3){
+    transform:rotateZ(-45deg);
+}
+
+.nav-hum:hover span:nth-child(4){
+    display:none;
+}
+/*下拉菜单*/
+.nav-main .nav-list{
+    top:4%;
+    width:280px;
+    height:500px;
+    background-color:white;
+    opacity:0.5;
+    margin-top:20px;
+    margin-right:20px;
+    border-radius:2em;
+    display:none;
+    border:1px solid gray;
+}
+.nav-main .nav-list li{
+    width:100%;
+    height:125px;
+    border-bottom:1px solid gray;
+    text-align: center;
+}
+.nav-main .nav-list #first-li{
+    padding-left:40px;
+}
+
+.nav-main .nav-list li a{
+    font-size: 30px;
+    line-height:125px;
+    color:#000;
+}
+/*主页面，介绍语*/
+.fu-main .intro-fir{
+    font-weight: 400;
+    position:absolute;
+    left:38.5%;
+    top:15%;
+    font-size:25px;
+}
+
+.fu-main .intro-sec{
+    font-weight: 300;
+    position: absolute;
+    left:36.5%;
+    top:20%;
+    font-size:20px;
+}
+
+.fu-main .btn-1{
+    font-weight: 300;
+    position: absolute;
+    left:42.5%;
+    top:40%;
+    font-size:20px;
+    margin-bottom:5px;
+    cursor:pointer;
+}
+
+.fu-main .btn-2{
+    font-weight: 300;
+    position: absolute;
+    left:42.5%;
+    top:50%;
+    font-size:20px;
+    margin-bottom:5px;
+    cursor: pointer;
+}

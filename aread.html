@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./src/img/favicon.ico" />
+    <link rel="stylesheet" href="./src/css/aread.css">
+</head>
+<body style="background:#fff;">
+    <!--浮动菜单栏-->
+    <div style="width:100%; height:10%; border-bottom:1px solid #ededed;background:;position:fixed;z-index:1000;">
+        <img src="./src/img/smallogo.png" alt="" class="nav-logo">
+        <div class="nav-main">
+            <div class="nav-hum">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-list">
+                    <li id="first-li"><a href="face.html">首页</a></li>
+                    <li><a href="ame.html">关于我</a></li>
+                    <li><a href="awebsite.html">关于网站</a></li>
+                    <li><a href="./afuture.html">关于未来</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--主页面-->
+    <div class="full-rap">
+        <div class="fu-main" id="fu-main">
+            <h3 class="intro-fir">读一本好书会让你豁然开朗。</h3>
+            <h4 class="intro-sec">这里就把我读过的有价值的书分享出来吧！</h4>
+            <!-- <span class="btn-1">手机用户请点击这里</span>
+            <span class="btn-2">电脑用户请点击这里</span> -->
+            <span class="btn-1">本页面还在开发中敬请期待～</span>
+        </div>
+    </div>
+    <script src="./src/js/jquery.js"></script>
+    <script>
+        var olist = $('.nav-list');
+        function mouseover(){
+            olist.css({'display':'block'});
+        }
+
+        function mouseout(){
+            olist.css({'display':'none'});
+        }
+
+        $('.nav-main').on('mouseover', function(){
+            mouseover();
+        })
+
+        $('.nav-main').on('mouseout', function(){
+            mouseout();
+        })
+        //点击切换背景        
+    </script>
+</body>
+</html>

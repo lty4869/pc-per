@@ -1,0 +1,187 @@
+*{
+    padding:0px;
+    margin:0px;
+        border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+    text-decoration:none;
+}
+html,body{
+    margin:0px;
+    height:100%;
+}
+.first-wrap{
+    background-attachment: fixed;
+    width: 100%;
+    height:100%;
+    position: relative;
+    box-shadow: inset 0px 5px 20px rgba(0,0,0,0.2);
+    background-position: 0px 5.6px;
+}
+/*主页面图片wrap*/
+.first-main{
+    background-image:url('../img/background.jpg');
+    background-size:cover; 
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.center-name{
+    /*left: 730.5px;*/
+    /*top: 330px;*/
+    top:50%;
+    left:50%;
+    position: absolute;
+    z-index:1;
+    width: 320px;
+    opacity: 0;
+    margin-top: -30px;
+    margin-left: -167px;
+    font-family:myname;
+    font-size:220px;
+    animation: name-in 0.5s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+}
+@keyframes name-in{
+    0%{
+        top:300px;
+        opacity:0;
+    }
+    100%{
+        top:330px;
+        opacity:1;
+    }
+}
+@font-face{
+    font-family: myname;
+    src:url('../ttf/Ginga.ttf');
+}
+
+.center-name:hover{
+     font-size:230px;
+    /*animation:name-hover 0.5s ease-out 1s 1 none;*/
+}
+
+/*smallogo*/
+.nav-logo{
+    float:left;
+    width:50px;
+    height:40px;
+    margin-top:40px;
+    margin-left: 40px;
+    animation: logo-in 0.5s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+    opacity: 0;
+}
+
+@keyframes logo-in{
+    0%{
+        /*top:300px;*/
+        opacity:0;
+    }
+    100%{
+        /*top:330px;*/
+        opacity:1;
+    }
+}
+/*下拉菜单添加变化事件未完成*/
+
+.nav-main{
+    position:relative;
+    float:right;
+    /*top:2%;
+    left:71.8%;*/
+    /*width:300px;
+    height:500px;*/
+    overflow:hidden;
+    /*cursor:pointer;*/
+    /*z-index:100;*/
+}
+
+.nav-hum{
+    position:relative;
+    float:right;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    margin-top:40px;
+    margin-right: 40px;
+    z-index:101;
+    /*border:1px solid black;*/
+}
+
+.nav-hum span{
+    position:absolute;
+    background-color: #000;
+    width:100%;
+    height:5px;
+}
+
+.nav-hum span:nth-child(1){
+    top:0;
+}
+
+.nav-hum span:nth-child(2){
+    top:8px;
+}
+
+.nav-hum span:nth-child(3){
+    top:8px;
+}
+
+.nav-hum span:nth-child(4){
+    top:16px;
+}
+
+
+.nav-hum:hover span:nth-child(1){
+    display: none;
+}
+
+.nav-hum:hover span:nth-child(2){
+transform:rotateZ(45deg);
+}
+
+.nav-hum:hover span:nth-child(3){
+    transform:rotateZ(-45deg);
+}
+
+.nav-hum:hover span:nth-child(4){
+    display:none;
+}
+
+
+/*下拉菜单列表*/
+
+.nav-main .nav-list{
+    top:4%;
+    width:280px;
+    height:500px;
+    background-color:rgb(180, 234, 251);
+    opacity:0.5;
+    margin-top:20px;
+    margin-right:20px;
+    border-radius:2em;
+    display:none;
+}
+.nav-main .nav-list li{
+    width:100%;
+    height:125px;
+    border-bottom:1px solid gray;
+    text-align: center;
+}
+.nav-main .nav-list #first-li{
+    padding-left:40px;
+}
+
+.nav-main .nav-list li a{
+    font-size: 30px;
+    line-height:125px;
+    color:#000;
+}
+
+

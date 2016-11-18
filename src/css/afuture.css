@@ -1,0 +1,343 @@
+*{
+    padding:0px;
+    margin:0px;
+    text-decoration: none;
+    border: 0;
+    font-size: 100%;
+    /*vertical-align: baseline;*/
+    outline: none;
+    text-decoration: none;
+}
+html,body{
+    margin:0px;
+    height:100%;
+}
+
+.fu-wrap{
+    background-attachment: fixed;
+    width: 100%;
+    height:100%;
+    position: relative;
+    /*box-shadow: inset 0px 5px 20px rgba(0,0,0,0.2);*/
+    background-position: 0px 5.6px;
+}
+
+.fu-main{
+    background-image:url('../img/moon2.jpg');
+    background-size:cover; 
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+/*smallogo*/
+
+.nav-logo2{
+    position:absolute;
+    float:left;
+    width:150px;
+    height:150px;
+    /*margin-top:300px;
+    margin-left: 630px;*/
+    left:44%;
+    top:29%;
+    animation: logo-on 2s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+    opacity: 0;
+}
+
+@keyframes logo-on{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.nav-logo{
+    float:left;
+    position:absolute;
+    width:50px;
+    height:40px;
+    margin-top:30px;
+    margin-left: 40px;
+    animation: logo-in 1.6s ease-out 1s 1 forwards;
+    text-shadow: 0 1px 10px #cccccc;
+    cursor:pointer;
+    opacity: 0;
+}
+
+@keyframes logo-in{
+    0%{
+        /*top:300px;*/
+        opacity:0;
+    }
+    100%{
+        /*top:330px;*/
+        opacity:1;
+    }
+}
+
+/*下拉菜单*/
+.nav-main{
+    position:relative;
+    float:right;
+    /*top:2%;
+    left:71.8%;*/
+    /*width:300px;
+    height:500px;*/
+    overflow:hidden;
+    /*cursor:pointer;*/
+    z-index:100;
+}
+
+.nav-hum{
+    position:relative;
+    float:right;
+    cursor: pointer;
+    width: 40px;
+    height: 20px;
+    margin-top:40px;
+    margin-right: 40px;
+    z-index:101;
+    /*border:1px solid black;*/
+}
+
+.nav-hum span{
+    position:absolute;
+    background-color: #000;
+    width:100%;
+    height:5px;
+}
+
+.nav-hum span:nth-child(1){
+    top:0;
+}
+
+.nav-hum span:nth-child(2){
+    top:8px;
+}
+
+.nav-hum span:nth-child(3){
+    top:8px;
+}
+
+.nav-hum span:nth-child(4){
+    top:16px;
+}
+
+
+.nav-hum:hover span:nth-child(1){
+    display: none;
+}
+
+.nav-hum:hover span:nth-child(2){
+transform:rotateZ(45deg);
+}
+
+.nav-hum:hover span:nth-child(3){
+    transform:rotateZ(-45deg);
+}
+
+.nav-hum:hover span:nth-child(4){
+    display:none;
+}
+/*下拉菜单*/
+.nav-main .nav-list{
+    top:4%;
+    width:280px;
+    height:500px;
+    background-color:white;
+    opacity:0.5;
+    margin-top:20px;
+    margin-right:20px;
+    border-radius:2em;
+    display:none;
+    border:1px solid gray;
+    background-color:rgb(230, 230, 230);
+}
+.nav-main .nav-list li{
+    width:100%;
+    height:125px;
+    border-bottom:1px solid gray;
+    text-align: center;
+}
+.nav-main .nav-list #first-li{
+    padding-left:40px;
+}
+
+.nav-main .nav-list li a{
+    font-size: 30px;
+    line-height:125px;
+    color:#000;
+}
+
+ /*中心句*/
+#cen-p1{
+     font-size:33px;
+     text-align: center;
+     padding-top:100px;
+     padding-bottom: 20px;
+ }
+
+ #cen-p2{
+     font-size:22px;
+     text-align: center;
+ }
+
+/*ws*/
+.fu-wrap .fu-main .ws span{
+    position: absolute;
+    display: inline-block;
+    width:200px;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    cursor:pointer;
+    animation: ws-in 3s ease-out 1s 1 forwards;
+}
+
+@keyframes ws-in{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 0.75;
+    }
+}
+
+.fu-wrap .fu-main .ws span:nth-child(1):hover{
+    color:orangered;
+     text-shadow: 0 1px 10px #cccccc;
+}
+
+.fu-wrap .fu-main .ws span:nth-child(2):hover{
+    color:cyan;
+     text-shadow: 0 1px 10px #cccccc;
+}
+
+.fu-wrap .fu-main .ws span:nth-child(3):hover{
+    color:tan;
+     text-shadow: 0 1px 10px #cccccc;
+}
+
+.fu-wrap .fu-main .fir-ws{
+    left:19%;
+    top:35%;
+}
+
+.fu-wrap .fu-main .sec-ws{
+    left:65%;
+    top:32%;
+}   
+
+.fu-wrap .fu-main .thr-ws{
+    left:35%;
+    top:60%;
+}     
+
+/*button下一页*/
+.button{
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0.75;
+    z-index: 999;
+    background-image: url('../img/arrow.png');
+    transition: all .2s ease-in-out 0s;
+    animation: btn-in 3s ease-out 1s 1 forwards;
+}
+
+/*@keyframes btn-in{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 0.75;
+    }
+}*/
+.button:hover{
+    cursor:pointer;
+    opacity:1;
+}
+
+/*slider2*/
+
+.slider{
+    width:100%;
+    height:100%;
+    position: relative;
+}
+
+/*#slider2{
+    background-image:url('../img/fu1.jpg');
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url('../img/fu.jpg');
+    background-position: 0 50%;
+}*/
+#slider2 .slider2-1{
+    position: absolute;
+    width:50%;
+    height:100%;
+    background-image:url('../img/fu1.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;    
+}
+
+#slider2 .slider2-1 span{
+    display: block;
+    font-size: 33px;
+    width:10px;
+    position:absolute;
+    right:55px;
+    top:200px;
+}
+
+#slider2 .slider2-2 span{
+    display: block;
+    font-size: 33px;
+    width:10px;
+    position:absolute;
+    left:30px;
+    top:200px;
+}
+
+#slider2 .slider2-2{
+    position: absolute;
+    left:50%;
+    width:50%;
+    height:100%;
+    background-image:url('../img/fu.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;    
+}
+
+#slider3{
+    background-image: url('../img/moon.jpg');
+    background-size:100% 100%;
+}
+
+#slider3 #cen-p1{
+    padding-top:100px;
+}
+
+#slider3 #cen-p1:hover{
+    cursor: pointer;
+    color:rebeccapurple;
+}
+
+
+#slider3 h5{
+    position: absolute;
+    left:40%;
+    bottom:30px;
+}
